@@ -110,7 +110,37 @@ body {
 .product-button:hover {
     background-color: #c0392b;
 }
+.cart-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.cart {
+    position: relative; /* Make this the reference for positioning */
+}
 
+.cart-quantity {
+    position: absolute;
+    top: 15px; /* Adjust based on your icon's size */
+    right: 15px; /* Adjust based on your icon's size */
+
+    color: white;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 18px;
+    font-weight: bold;
+    min-width: 20px; /* Minimum width to ensure the quantity is visible */
+    text-align: center;
+}
+.product-button:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+}
+
+.product-button.added {
+    background-color: grey;
+    cursor: not-allowed;
+}
 /* Pseudo-elements - Sale badge */
 .product-card::before {
     content: "SALE";
